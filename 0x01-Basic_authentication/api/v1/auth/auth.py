@@ -17,7 +17,7 @@ class Auth:
             if path == excluded_path[:-2]:
                 return False
 
-            if path == excluded_paths:
+            elif path == excluded_paths:
                 return False
 
     def authorization_header(self, request=None) -> str:
