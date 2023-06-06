@@ -21,7 +21,7 @@ if getenv("AUTH_TYPE", None) == auth:
 
 
 @app.before_request
-def before_request_handler():
+def before_request_handler() -> str:
     """before request handler"""
     if auth is None:
         return
