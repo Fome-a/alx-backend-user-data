@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""" A user model """
+"""" A user model for a users  database table using declarative mapping"""
 
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
+
 Base = declarative_base()
 
+
 class User(Base):
-    """table of users with attributes specified"""   # creating a class User taht inherits from Base
+    """table of users with attributes specified"""
+    # creating a class User taht inherits from Base
+
     __tablename__ = 'users'  # name of table
 
     id = Column(Integer, primary_key=True)
